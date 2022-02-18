@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* h3{
+    color: rgb(234,130,107);
+} */
+
+@font-face {
+    font-family: myfont;
+    src: url(Malevolent.ttf);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-item {
+    font-size: 15px;
+}
+
+#inside {
+    width: 450px;
+    height: 350px;
+}
+
+.social-links{
+    width: 50px;
+    height: auto;
+}
+
+.edit-form {
+    display: none;
+}
+
+.api {
+    height: 200px;
+    width: 243px;
+    border: solid 3px red;
+}
+
+.add {
+    height: fit-content;
+    width: fit-content;
+}
+
+.pad {
+    padding: 0px;
+}
+
+.fw-bold {
+    /* color: rgb(83, 83, 83); */
+    color: rgb(234,130,107);
+}
+
+/* .border {
+    color: solid 5px rgb(56, 110, 83);
+} */
+
+form {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    width: 50%;
+    display: flex;
+}
+.navbar-collapse{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.navbar{
+    border-bottom: solid 3px rgb(56, 110, 83);
+    background-color: rgb(255, 255, 255);
+}
+
+.logo {
+    border-radius: 20px;
+    height: 130px;
+}
+
+.btn{
+    background-color: rgb(234, 130, 107);
+    border-color: rgb(83, 83, 83);
+}
+
+#self{
+    height: 300px;
+    width: 700px;
+    border-radius: 20px;
+    border: solid 3px rgb(83, 83, 83);
+}
+
+.para {
+    background-color: rgb(247, 243, 240);
+    border-radius: 20px;
+    margin: 20px;
+}
+/* 
+.bord{
+    border: solid 3px rgb(107, 112, 92);
+} */
+
+
+.location {
+    width: 300px;
+    display: flex;
+}
+
+#map {
+    height: 300px;
+    width: 60vw;
+}
+
+html, body, .parent {
+    height: 400px;
+}
+
+.left,.right{
+    padding:1px 0.5em;
+    background:#fff;
+    float:right;
+}
+.left{
+    float:left;
+    clear:both;
+}
+.dotted{
+    border-bottom: 1px dotted grey;
+    margin-bottom:2px;
+}
+.myTable{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.myRow{
+    display: flex;
+    flex-direction: row;
+}

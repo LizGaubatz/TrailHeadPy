@@ -155,3 +155,10 @@ html, body, .parent {
     display: flex;
     flex-direction: row;
 }
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 3rem;
+
+}

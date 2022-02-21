@@ -59,29 +59,28 @@
         <div class="d-flex justify-content-between border-bottom border-dark m-3 p-3">
             <p scope="col" class="fst-italic">{{type.name}}</p>
             {% if session['user'] %}
-            <button class="btn btn-sm btn-outline-dark mx-3" class="" href="/delete/{{type.id}}" role="button">Delete</button>
+            <button class="btn btn-sm btn-outline-dark mx-3" class="" href="/delete/{{type.id}}"
+                role="button">Delete</button>
             {% endif %}
         </div>
-        {% for item in type.item %}
-        <table class="border w-50 mt-2">
-                <tr>
-                        <td class="me-auto p-2" scope="col">{{item.name}}</td>
-                        <td class="text-end">
+        <ul>
+            <div class="item-grid">
+            {% for item in type.item %}
+                <li class="d-flex">
+                    <div>
+                        <p class="me-auto p-2" scope="col">{{item.name}}</p>
+                        <p class="p-2">{{item.description}}..................... ${{item.price}}</p>
+                    </div>
+                    <p class="text-end">
                         {% if session['user'] %}
-                        <!-- <span class="d-flex" role="group"> -->
-                            <a class="btn btn-sm btn-outline-dark mx-3" href="/delete/{{item.id}}" role="button">Delete</a>
-                            <button class="btn btn-sm btn-outline-dark" onclick="editButton('{{item.id}}')">Edit</button>
-                        <!-- </span> -->
+                        <a class="btn btn-sm btn-outline-dark mx-3" href="/delete/{{item.id}}" role="button">Delete</a>
+                        <button class="btn btn-sm btn-outline-dark" onclick="editButton('{{item.id}}')">Edit</button>
                         {% endif %}
-                    </td>
-                </tr>
-                <tr>
-                    <td class="p-2">{{item.description}}..................... ${{item.price}}</td>
-                </tr>
+                    </p>
+                </li>
                 {% if session['user'] %}
                 <div class="edit-form" id="{{item.id}}">
-                    <form class="cols-lg-auto g-3 edit-form w-25 mx-auto" action='/edit/item/{{item.id}}'
-                        method="post">
+                    <form class="cols-lg-auto g-3 edit-form w-25 mx-auto" action='/edit/item/{{item.id}}' method="post">
                         <div class="d-flex-col">
                             <div class="p-2">
                                 <label class="col-sm-2 col-form-label-sm fs-6" for='name'>Name:</label>
@@ -102,8 +101,10 @@
                         </div>
                     </form>
                     {% endif %}
-            </table>
-            {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </ul>
         {% endfor %}
     </div>
 
